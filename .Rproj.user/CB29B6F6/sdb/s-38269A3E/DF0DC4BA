@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1403371274905.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DF0DC4BA",
+    "lastKnownWriteTime" : 7741240722073845761,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "df.mv",
+        "contentUrl" : "content?title=df.mv&file=2a36f1386e124d09a011a4ad48ccf170.htm",
+        "displayedObservations" : 1000,
+        "displayedVariables" : 7,
+        "totalObservations" : 2099,
+        "variables" : 6
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "library(ggplot2)\nlibrary(reshape2)\n\n# Read RDS files to dataframes.\n# NEI = National Emissions Data \n# SCC = Source Classification Code Table\nnei <- readRDS(\"summarySCC_PM25.rds\")\nscc <- readRDS(\"Source_Classification_Code.rds\")\n\n# convert years from int to factors\nnei$year <- as.factor(nei$year) \n\n# subset data to Motor Vehicles in Baltimore and Los Angeles\n# motor vehicles are defined as those with type = ON-ROAD\nnei.cities <- nei[(nei$fips == \"24510\" | nei$fips == \"06037\") & nei$type == \"ON-ROAD\",] \n\n# summarize subsetted table into aggregate values\ndfmelt<-melt(nei.cities, id.vars = c(\"type\", \"year\", \"fips\"), measure.vars = \"Emissions\")\ndf <- aggregate(. ~ type + year + fips, data=dfmelt, FUN=sum)\n\n## calculate percent change from 1999 to 2008\npct.baltimore <- sprintf(\"%.0f%%\",100*(df$value[df$fips == '24510' & df$year == 2008] / df$value[df$fips == '24510' & df$year == 1999] - 1))\npct.losangeles <- sprintf(\"%.0f%%\",100*(df$value[df$fips == '06037' & df$year == 2008] / df$value[df$fips == '06037' & df$year == 1999] - 1))\n\n## function to label facets with city names and percent change\ncity.names <- list('06037'=paste(\"Los Angeles County (1999 to 2008 pct chg =\", pct.losangeles,\")\"), '24510'=paste(\"Baltimore City (1999 to 2008 pct chg =\", pct.baltimore,\")\"))\ncity.labeller <- function(variable, value){\n    return(city.names[value])\n}\n\n## create plot\nggplot(df, aes(x=year, y=value)) + geom_bar(stat=\"identity\") + facet_grid(. ~ fips, labeller = city.labeller) + \n    labs(title=\"Aggregate Tons of PM2.5 Emissions from Motor Vehicles\") + ylab(\"Tons\")\n\ndev.copy(png, file=\"plot6.png\")\ndev.off()\n",
+    "created" : 1403361173486.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3913796654",
+    "id" : "C0017089",
+    "lastKnownWriteTime" : 1403370702,
+    "path" : "~/GitHub/EDA Project 2/plot6.R",
+    "project_path" : "plot6.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

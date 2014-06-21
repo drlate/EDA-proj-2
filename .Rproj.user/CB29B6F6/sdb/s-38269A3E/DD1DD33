@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1403371322301.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DD1DD33",
+    "lastKnownWriteTime" : 7741240722073845761,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "nei.cities",
+        "contentUrl" : "content?title=nei.cities&file=75747581bd1e415b884b1065bc2acd29.htm",
+        "displayedObservations" : "1000",
+        "displayedVariables" : 7,
+        "totalObservations" : "2097",
+        "variables" : "6"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1403369078474.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "991BB7DD",
+    "lastKnownWriteTime" : 7741240722073845761,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "coalcomb",
+        "contentUrl" : "content?title=coalcomb&file=d547cb7ceea448129c85046be7912133.htm",
+        "displayedObservations" : "80",
+        "displayedVariables" : 16,
+        "totalObservations" : "80",
+        "variables" : "15"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

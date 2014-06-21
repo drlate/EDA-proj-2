@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1403365701304.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "26192687",
+    "lastKnownWriteTime" : 7741240722073845761,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "dfmelt",
+        "contentUrl" : "content?title=dfmelt&file=68cad82fb6924f11a7d059a3c3c1d15e.htm",
+        "displayedObservations" : "1000",
+        "displayedVariables" : 4,
+        "totalObservations" : "2099",
+        "variables" : "5"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
